@@ -1,18 +1,11 @@
 ---
 layout: default
-title: "Jekyll Docs Template"
+title: "CNPaaS 文档"
+subtitle: "首页"
 ---
 
-### Get Started
+## 前言
 
-Start by [creating a new post](http://jekyllrb.com/docs/posts/) one of the categories listed in `_config.yml`. It will appear in the navigation on the left once recompiled. Or use the supplied script to make creating pages easier:
+CNPaaS 是一个让开发人员无痛的发布自己的应用。你在平台上申请了一个帐号后，即可生成你的应用。
 
-```bash
-ruby bin/jekyll-page "Some Page Title" ref
-```
-
-#### Don't Forget
-
-- Add your own content to this page (i.e. `index.md`) and change the `title`
-- Change `title` and `subtitle` defined in `config.yml` for your site
-- Set the `baseurl` in `_config.yml` for your repo if deploying to GitHub pages
+每个用户应用均有其独有的 Git 地址来推送他的代码。

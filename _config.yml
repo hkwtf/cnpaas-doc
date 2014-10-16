@@ -1,6 +1,6 @@
 # Site title and subtitle. This is used in _includes/header.html
-title: 'jekyll-docs-template'
-subtitle: 'Painless documentation for your projects'
+title: 'CNPaaS 应用文档'
+subtitle: '给力的 PaaS 平台'
 
 # Enable/show navigation. There are there options:
 #   0 - always hide
@@ -9,16 +9,18 @@ subtitle: 'Painless documentation for your projects'
 navigation: 2
 
 # URL to source code, used in _includes/footer.html
-codeurl: 'https://github.com/bruth/jekyll-docs-template'
+codeurl: ''
 
 # Default categories (in order) to appear in the navigation
 sections: [
-    ['doc', 'Documentation'],
-    ['tut', 'Tutorial'],
-    ['ref', 'Reference'],
-    ['dev', 'Developers'],
-    ['post', 'Posts']
+  ['installation', '安装'],
+  ['tutorial', '试范'],
+  ['usage', '使用'],
 ]
+
+timezone: 'Asia/Hong_Kong'
+
+encoding: 'utf-8'
 
 # Keep as an empty string if served up at the root. If served up at a specific
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
@@ -28,7 +30,7 @@ baseurl: ''
 permalink: none
 
 # Syntax highlighting
-pygments: true
+highlighter: pygments
 
 # Since these are pages, it doesn't really matter
 future: true
@@ -36,16 +38,26 @@ future: true
 # Exclude non-site files
 exclude: ['bin', 'README.md']
 
+sass:
+  style: :compressed
+
 # Use the redcarpet Markdown renderer
 markdown: redcarpet
 redcarpet:
-    extensions: [
-        'no_intra_emphasis',
-        'fenced_code_blocks',
-        'autolink',
-        'strikethrough',
-        'superscript',
-        'with_toc_data',
-        'tables',
-        'hardwrap'
-    ]
+  extensions: [
+    'no_intra_emphasis',
+    'fenced_code_blocks',
+    'autolink',
+    'strikethrough',
+    'superscript',
+    'with_toc_data',
+    'tables',
+    'hardwrap'
+  ]
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      comments: true
