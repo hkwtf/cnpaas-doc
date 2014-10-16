@@ -1,3 +1,3 @@
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/bruth/jekyll-docs-template/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+Docs Page: http://wtf-limited.github.io/cnpaasdoc
 
-Read the docs: http://bruth.github.io/jekyll-docs-template
+Or: http://doc.cnpaas.io
