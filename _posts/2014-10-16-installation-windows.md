@@ -7,3 +7,44 @@ order: 2
 ---
 
 ## 在 Windows 上的安装
+
+要有效使用本平台，你需要安装以下软件库。
+
+* Ruby
+* Git
+
+及生成一对 公用/私有密钥 (public/private keys) 
+
+## 在 Windows 上的安装程序
+
+  * **Ruby 及 Git**
+
+	[RailsInstaller](http://railsinstaller.org/en) 提供了很方便的 (Ruby + Rails) 打包，或可点击[这里直接下载](http://goo.gl/DvzVwL)。此打包也直接包含了 Git 指令。
+	
+	如你已有 Rails, 也可在这里只直接下载 [Git](http://git-scm.com/download/win)
+	
+  * **CNPaaS 指令行库**
+
+	注：在中國內地 rubygems.org 存放在 AWS S3 的源遭屏閉，所以可用以下指令來使用淘寶鏡像。
+	
+		gem sources --remove https://rubygems.org/
+		gem sources -a https://ruby.taobao.org/
+	
+	跟着直接输入以下指令来安装指令行：
+	
+		gem install cnpaas_cli
+	
+  * **生成 公用 / 私有密钥**
+  
+	如果你有用 Rails Installer 安装 Ruby 的话，它自带已安装了一对 keys 给你，就在 你 `C:\Users\username\.ssh\` 目录内。`id_rsa` 为你的私有钥，请妥善保管此档案，这档案的重要性也和密码一样。
+	
+	另外，CNPaaS 也需要你的公用钥。你可用以下指令来观看公用钥内容
+	
+		# cd C:\Users\username\.ssh\
+		# type id_rsa.pub 
+		
+		ssh-rsa AAAAB3NzaC1yc2EAAAA...
+		
+	请把 `ssh-rsa AAA...` 那一串字符串复制。
+	
+	发录到你的 CNPaaS 帐号上，点击右上方你的用户名，在 **帐号设置** 内，公钥部份，贴上你公钥。要注意的是整个公钥要在一行内完成，中间不可有回车隔行。然后点选 **更新**。
