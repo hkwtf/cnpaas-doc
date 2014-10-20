@@ -9,7 +9,7 @@ subtitle: ""
 navigation: 2
 
 # URL to source code, used in _includes/footer.html
-codeurl: ''
+codeurl: 'https://github.com/WTF-Limited/cnpaasdoc'
 
 # Default categories (in order) to appear in the navigation
 sections: [
