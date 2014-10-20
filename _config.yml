@@ -1,6 +1,6 @@
 # Site title and subtitle. This is used in _includes/header.html
 title: 'CNPaaS 应用文档'
-subtitle: '给力的 PaaS 平台'
+subtitle: ""
 
 # Enable/show navigation. There are there options:
 #   0 - always hide
@@ -13,9 +13,9 @@ codeurl: ''
 
 # Default categories (in order) to appear in the navigation
 sections: [
-  ['installation', '安装'],
-  ['tutorial', '试范'],
-  ['usage', '使用'],
+  ['installation', '安装指引'],
+  ['tutorial', '新手试范'],
+  ['usage', '使用指南'],
 ]
 
 timezone: 'Asia/Hong_Kong'
