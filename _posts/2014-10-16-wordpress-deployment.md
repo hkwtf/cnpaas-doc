@@ -12,7 +12,9 @@ date: 2014-10-16 12:45:53
 
 ### 1. 下载 WordPress
 
-下载最新的 WordPress 包 ([点击下载](https://wordpress.org/download/)). 因为默认有用 Google 字体，在内地载入可能会有点慢，可按照 [这里的方法](http://www.dmeng.net/remove-open-sans-from-wp-core.html) 移除载入 Google Font。
+下载 [WordPress 4.0](https://wordpress.org/download/)。因为默认有用 Google 字体，在内地载入可能会有点慢，可按照 [这里的方法](http://www.iztwp.com/googleapis2useso.html) 移除载入 Google Font。
+
+为方便起见，我们也准备了一份 WordPress 4.0 包，把 Google 字体源 转换到 360源。[点击这里从微云下载](http://url.cn/RpUGsZ)。
 
 ### 2. 初始化设置档
 
