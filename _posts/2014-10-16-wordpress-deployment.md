@@ -35,7 +35,7 @@ define('DB_HOST', 'localhost');
 
 跟着你需要把 WordPress 项目转换为可支持 CNPaaS 平台。请先安装 **CNPaaS 指令库** 。可查看这里的安装指南 ([Windows]({{site.url}}/installation/windows.html#cnpaas_cli), [Mac OS]({{site.url}}/installation/macos.html#cnpaas_cli))。
 
-输入以下指令来把 WordPress 项目转换为可支持 CNPaaS 平台。运行前，请确保 `mysql` 及 `php` 都在你的 PATH 路径底下。即你在指令行可直接执行 `mysql` 及 `php`。
+输入以下指令来把 WordPress 项目转换为可支持 CNPaaS 平台。运行前，请确保 `mysql` 及 `php` 都在你的 PATH 路径底下。即你在命令行可直接执行 `mysql` 及 `php`。
 
 {% highlight console %}
 $ cd /path/to/wordpress/folder
