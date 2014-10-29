@@ -31,9 +31,9 @@ define('DB_HOST', 'localhost');
 
 这些设置是连到你本机的开发数据库。如果是新的数据库，请创建相关的数据库并授权相关用户访问该数据库。
 
-### 3. 转换 WordPress 为可支持 CNPaaS 及 迁移数据
+### 3. 转换 WordPress 为可支持 CNPaaS
 
-跟着你需要把 WordPress 项目转换为可支持 CNPaaS 平台。请先安装 **CNPaaS 指令库** 。可查看这里的安装指南 ([Windows]({{site.url}}/installation/windows.html#cnpaas_cli), [Mac OS]({{site.url}}/installation/macos.html#cnpaas_cli))。
+跟着你需要把 WordPress 项目转换为可支持 CNPaaS 平台。请先安装 **CNPaaS 命令行库** 。可查看这里的安装指南 ([Windows]({{site.url}}/installation/windows.html#cnpaas_cli), [Mac OS]({{site.url}}/installation/macos.html#cnpaas_cli))。
 
 在终端输入以下命令来把 WordPress 项目转换为可支持 CNPaaS 平台。运行前，请确保 `mysql` 及 `php` 都在你的 PATH 路径底下。即你在命令行可直接执行 `mysql` 及 `php`。
 
@@ -50,12 +50,18 @@ $ cnpaas wordpress init .
 
 <img class="embeddable" src="{{site.url}}/images/php/01-app-details.png" alt="应用详情" title="应用详情"></img>
 
+这命令会在你的 WordPress 目录里加入一些 wp-config.xxx.php 的文件。最重要的是 `wp-config.development.php` 及 `wp-config.staging.php`。以后当你在开发环境，则会用 `wp-config.development.php` 的参数设置。在 staging 的环境 (即运行在 CNPaaS 上时)，则会用 `wp-config.staging.php` 的参数设置。
+
+你也可自行修改档案内的参数。
+
+### 4. 迁移数据
+
 跟着执行以下命令把开发境的数据 迁移到 CNPaaS的云端演示环境内。
 
 {% highlight console %}
 $ cnpaas wordpress migrate_db . -f development -t staging
 {% endhighlight %}
 
-### 4. 推送 WordPress 代码
+### 5. 推送 WordPress 代码
 
 现在 开发环境的数据已同步到 远端演示环境数据库。最后一步就是把 WordPress 代码推送到我们的代码库上。详情可参看 [这里]({{site.url}}/usage/php.html)。
