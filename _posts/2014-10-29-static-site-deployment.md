@@ -1,0 +1,61 @@
+---
+layout: page
+title: "Static Site"
+top_title: "布署静态网站"
+category: tutorial
+date: 2014-10-29 10:01:53
+---
+
+在 CNPaaS 上托静态管HTML很容易，跟 [布署 PHP 应用]({{site.url}}/usage/php.html) 里面的方法唯一的区别是需要在项目目录里准备一个 **.htaccess** 文件（内容可为空）。
+
+---
+
+### 1. 创建应用，准备代码
+
+登陆 CNPaaS 后台，点击 “创建应用” 。
+
+准备好你的 HTML 代码。如果你项目时一个纯静态网站，请将首页的HTML文件命名为index.html。
+
+### 2. 添加.htaccess
+
+如果在 Mac OS X 或者 Linux 系统下使用终端，可以在项目目录里用一下命令创建 **.htaccess** 文件:
+
+{% highlight console %}
+$ touch .htaccess
+{% endhighlight %}
+
+如果是使用Windows系统，除了通过 Putty 或者 Git Bash 等终端工具以上述命令创建外，还可以通过系统自带的 **记事本** 进行创建，方法如下:
+
+打开记事本，在菜单上选择 文件 > **另存为** ，然后在保存界面上，**文件名** 设为 **.htaccess** ，**保存类型** 设为 **所有文件** 即可。
+
+### 3. 推送 HTML 代码
+
+最后一步就是把 HTML 代码推送到我们的代码库上。具体方法可参考 [这里]({{site.url}}/usage/php.html)。
+
+所使用的命令如下:
+
+{% highlight console %}
+$ git init . //初始化 git 仓库
+$ git add -A //对 git 仓库进行文件的增删改
+$ git commit . -m "Your Commit Message" //提交把项目更新提交给 git 并附加相关信息
+
+$ git remote add cnpaas <git-repo addr> //添加远端 git 仓库，其中<git-repo addr>替换为 CNPaaS 上应用后台的 **Git地址**。
+$ git push cnpaas master //代码推送到CNPaaS。
+{% endhighlight %}
+
+然后就可以进入对应的应用后台，打开 **CNPaaS网址** 来访问你的静态网站。
+
+对于已经完成过 git初始化 及 远端git仓库 设定的项目，每次更新只需要依次执行以下命令即可:
+
+{% highlight console %}
+$ git add -A
+$ git commit . -m "Your Commit Message"
+$ git push cnpaas master
+{% endhighlight %}
+
+对于Git的详细使用，建议参考以下资料：
+[Pro Git](http://git-scm.com/book/zh/)
+
+### 4. 设定独立域名
+
+如果想为你的 HTML 网站设定独立的域名进行访问，可参考 [自定义网址]({{site.url}}/usage/custom-domains.html) 。
