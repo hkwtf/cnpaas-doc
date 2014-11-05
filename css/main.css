@@ -18,15 +18,6 @@ code {
     color: inherit;
 }
 
-#header {
-    border-bottom: 1px solid #eee;
-    margin-bottom: 20px;
-}
-
-#header a:hover {
-    text-decoration: none;
-}
-
 #footer {
     margin: 20px 0;
     font-size: 0.85em;

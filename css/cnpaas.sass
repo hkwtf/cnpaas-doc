@@ -4,6 +4,7 @@
 body
   font-size: 100%
   font-family: Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif
+  padding-top: 70px // navbar
 
 p
   line-height: 2em
@@ -28,3 +29,49 @@ img.embeddable
 
 div.extra-bottom-margin
   margin-bottom: 50px
+
+//===
+
+.navbar-cnpaas
+  .navbar-inner
+    background-color: #232d30
+    background-image: none
+    border-color: #4e656c
+    border-width: 0 0 5px
+    min-height: 50px
+
+  .brand
+    color: #f8f8fa
+    font-size: 28px
+    font-weight: 100
+    letter-spacing: 2px
+    padding: 14px 20px 14px
+
+  .nav
+    > li > a
+      padding: 15px 15px 15px
+      font-size: 14px
+
+    > .active > a
+      &, &:hover, &:focus
+        background-color: #090909
+        color: #fff
+
+    .btn
+      margin-top: 10px
+
+.user-login-true-controls
+  &, .user-login &
+    display: none
+  .user-login-false &
+    display: none
+  .user-login-true &
+    display: initial
+
+.user-login-false-controls
+  &, .user-login &
+    display: none
+  .user-login-false &
+    display: initial
+  .user-login-true &
+    display: none
