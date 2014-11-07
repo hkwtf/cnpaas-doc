@@ -1,5 +1,5 @@
 # Site title and subtitle. This is used in _includes/header.html
-title: 'CNPaaS 应用文档'
+title: "CNPaaS"
 subtitle: ""
 
 # Enable/show navigation. There are there options:
@@ -25,6 +25,10 @@ encoding: 'utf-8'
 # Keep as an empty string if served up at the root. If served up at a specific
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
 baseurl: ''
+
+parenturl: 'http://www.cnpaas.io'
+
+dashboardurl: 'http://dashboard.cnpaas.io'
 
 # Dates are not included in permalinks
 permalink: none
