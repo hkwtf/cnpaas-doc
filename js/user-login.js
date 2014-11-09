@@ -19,6 +19,15 @@ $(function() {
     } else {
       setLoggedOut();
     }
+
+    var csrfParam, csrfToken;
+    if (csrfParam = user["csrf-param"]) {
+      $("head").append("<meta name='csrf-param' content='" + csrfParam + "'/>");
+    }
+    if (csrfToken = user["csrf-token"]) {
+      $("head").append("<meta name='csrf-token' content='" + csrfToken + "'/>");
+    }
+
   }).fail(function () {
     setLoggedOut();
   });
