@@ -16,15 +16,15 @@
 
       <div class="navbar-collapse">
         <ul class="nav pull-right user-login">
-          <li><a href="http://www.cnpaas.io/#features">重点功能</a></li>
-          <li><a href="http://www.cnpaas.io/pricing">价格</a></li>
-          <li><a href="http://www.cnpaas.io/contact-us">联系</a></li>
-          <li class="active"><a href="http://doc.cnpaas.io">文档</a></li>
-          <li><a href="http://blog.cnpaas.io">博客</a></li>
+          <li><a href="{{ site._env.www_url }}/#features">重点功能</a></li>
+          <li><a href="{{ site._env.www_url }}/pricing">价格</a></li>
+          <li><a href="{{ site._env.www_url }}/contact-us">联系</a></li>
+          <li class="active"><a href="{{ site.baseurl }}">文档</a></li>
+          <li><a href="{{ site._env.blog_url }}">博客</a></li>
 
-          <li class="user-login-false-controls"><a href="http://dashboard.cnpaas.io/accounts/sign_in">登入</a></li>
+          <li class="user-login-false-controls"><a href="{{ site._env.dashboard_url }}/accounts/sign_in">登入</a></li>
           <li class="user-login-false-controls">
-            <div><a href="http://dashboard.cnpaas.io/accounts/sign_up" class="btn btn-info navbar-btn">注册</a></div>
+            <div><a href="{{ site._env.dashboard_url }}/accounts/sign_up" class="btn btn-info navbar-btn">注册</a></div>
           </li>
 
           <li class="dropdown user-login-true-controls">
@@ -33,10 +33,10 @@
               <span class="caret"></span>
             </a>
             <ul class="dropdown-menu dropdown-menu-right" role="menu" area-labelledBy="dLabel">
-              <li><a href="http://dashboard.cnpaas.io/apps">应用总滙</a></li>
-              <li><a href="http://dashboard.cnpaas.io/accounts/edit">帐号设置</a></li>
+              <li><a href="{{ site._env.dashboard_url }}/apps">应用总滙</a></li>
+              <li><a href="{{ site._env.dashboard_url }}/accounts/edit">帐号设置</a></li>
               <li class="divider"></li>
-              <li><a href="http://dashboard.cnpaas.io/accounts/sign_out" data-method="delete">用户登出</a></li>
+              <li><a href="{{ site._env.dashboard_url }}/accounts/sign_out" data-method="delete">用户登出</a></li>
             </ul>
           </li>
         </ul>
