@@ -1,3 +1,10 @@
+# Environment (to be overridden by _config.development.yml in development env)
+environment: production
+_env:
+  www_url: http://www.cnpaas.io
+  dashboard_url: http://dashboard.cnpaas.io
+  blog_url: http://blog.cnpaas.io
+
 # Site title and subtitle. This is used in _includes/header.html
 title: "CNPaaS"
 subtitle: ""
@@ -25,10 +32,6 @@ encoding: 'utf-8'
 # Keep as an empty string if served up at the root. If served up at a specific
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
 baseurl: ''
-
-parenturl: 'http://www.cnpaas.io'
-
-dashboardurl: 'http://dashboard.cnpaas.io'
 
 # Dates are not included in permalinks
 permalink: none

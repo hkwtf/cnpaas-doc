@@ -1,0 +1,6 @@
+# Environment (to override _config.yml for development env)
+environment: development
+_env:
+  www_url: http://www.cnpaas.localhost:4567
+  dashboard_url: http://dashboard.cnpaas.localhost:3000
+  blog_url: http://blog.cnpaas.io
