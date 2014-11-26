@@ -14,7 +14,7 @@ date: 2014-10-16 12:45:53
 
 下载 [WordPress 4.0](https://wordpress.org/download/)。因为WordPress默认使用了 Google 字体，在内地载入可能会有点慢，可按照 [这里的方法](http://www.iztwp.com/googleapis2useso.html) 移除载入 Google Font。
 
-为方便内地用户使用WordPress时获得更好的体验，我们也准备了一份 WordPress 4.0 优化版安装包，把 Google 字体源 转换到 360源。[点击这里从微云下载](http://url.cn/RpUGsZ)。
+为方便内地用户使用WordPress时获得更好的体验，我们也准备了一份 WordPress 4.0 优化版安装包，把 Google 字体源 转换到 360源。[点击这里下载](http://cnpaas.qiniudn.com/package-wordpress-4.0.zip)。
 
 ### 2. 初始化设置档
 
