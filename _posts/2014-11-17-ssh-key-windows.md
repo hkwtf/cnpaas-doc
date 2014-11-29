@@ -23,7 +23,7 @@ order: 3
 $ ssh-keygen
 {% endhighlight %}
 
-之后系统会询问你的公钥保存在什么地方以及passphrase，直接回车的话，公钥和密钥会保存在你用户主目录下的 `.ssh` 里(如：C:\Users\username\.ssh\)，而每次提交代码时不需要填写密码（passphrase）。
+之后系统会询问你的公钥保存在什么地方以及passphrase，直接回车的话，公钥和密钥会保存在你用户主目录下的 `.ssh` 里(如： `C:\Users\username\.ssh\` )，而每次提交代码时不需要填写密码（passphrase）。
 
 这时打开 `.ssh` 里的 `id_rsa.pub` 文件，或者在 Git Bash 里执行：
 
