@@ -12,20 +12,14 @@ $(function() {
     $("a.brand").attr("href", "{{ site._env.www_url }}")
   }
 
-
-  $.getJSON("{{ site._env.dashboard_url }}" + "/users/current.js?callback=?", function(user) {
-    if (user && (user_slug = user.user_slug)) {
+  $.getJSON("{{ site._env.dashboard_url }}" + "/u/current.js?callback=?", function(user) {
+    if (user) {
+      var user_slug = user.user_slug;
+      $("head").append("<meta name='csrf-param' content='" + user["csrf-param"] + "'/>");
+      $("head").append("<meta name='csrf-token' content='" + user["csrf-token"] + "'/>");
       setLoggedIn(user_slug);
     } else {
       setLoggedOut();
-    }
-
-    var csrfParam, csrfToken;
-    if (csrfParam = user["csrf-param"]) {
-      $("head").append("<meta name='csrf-param' content='" + csrfParam + "'/>");
-    }
-    if (csrfToken = user["csrf-token"]) {
-      $("head").append("<meta name='csrf-token' content='" + csrfToken + "'/>");
     }
 
   }).fail(function () {
