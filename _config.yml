@@ -21,7 +21,7 @@ codeurl: 'https://github.com/WTF-Limited/cnpaasdoc'
 # Default categories (in order) to appear in the navigation
 sections: [
   ['installation', '安装指引'],
-  ['tutorial', '新手试范'],
+  ['tutorial', '应用范例'],
   ['usage', '使用指南'],
 ]
 

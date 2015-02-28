@@ -1,9 +1,10 @@
 ---
 layout: page
-title: "WordPress"
+title: "WordPress (PHP)"
 top_title: "部署 WordPress 应用"
 category: tutorial
 date: 2014-10-16 12:45:53
+order: 2
 ---
 
 以下为一步一步的试范指引：如何快速在CNPaaS上运行WordPress网站。
