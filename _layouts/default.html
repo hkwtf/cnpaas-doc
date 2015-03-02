@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="{{ site.baseurl }}/css/pygments.css">
     </head>
     <body>
-
+      <div id="environment">{{ site.environment }}</div>
         {% include header.html %}
         <div class="container">
 
@@ -43,17 +43,6 @@
           <div class=row-fluid>
             <div id="disqus_thread" class="span12"></div>
           </div>
-          <script type="text/javascript">
-            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-            var disqus_shortname = 'cnpaas'; // required: replace example with your forum shortname
-
-            /* * * DON'T EDIT BELOW THIS LINE * * */
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-          </script>
           <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         {% endif %}
 
@@ -68,54 +57,7 @@
         <script src="//maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
         <script src="{{ site.baseurl }}/js/user-login.js"></script>
         <script src="{{ site.baseurl }}/js/data-method.js"></script>
-        <script>
-            function orderNav() {
-                var list,
-                    section,
-                    header,
-                    sections = [],
-                    lists = {},
-                    headers = {};
-
-                var navUl = document.querySelectorAll('#navigation ul')[0],
-                    navLis = document.querySelectorAll('#navigation ul li');
-
-                if (!navUl) return;
-
-                for (var i = 0; i < navLis.length; i++) {
-                    var order, li = navLis[i];
-
-                    if (li.classList.contains('nav-header')) {
-                        section = li.textContent || li.innerText;
-                        sections.push(section);
-                        headers[section] = li;
-                        continue;
-                    }
-
-                    if (!lists[section]) {
-                        lists[section] = [];
-                    }
-
-                    order = parseFloat(li.getAttribute('data-order'))
-                    lists[section].push([order, li]);
-                }
-
-                for (var i = 0; i < sections.length; i++) {
-                    section = sections[i];
-                    list = lists[section].sort(function(a, b) {
-                        return a[0] - b[0];
-                    });
-
-                    if (header = headers[section]) {
-                        navUl.appendChild(header);
-                    }
-                    for (var j = 0; j < list.length; j++) {
-                        navUl.appendChild(list[j][1]);
-                    }
-                }
-            }
-
-            if (document.querySelectorAll) orderNav();
-        </script>
+        <script src="{{ site.baseurl }}/js/disqus.js"></script>
+        <script src="{{ site.baseurl }}/js/app.js"></script>
     </body>
 </html>
