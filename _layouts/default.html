@@ -18,7 +18,8 @@
         <link rel="stylesheet" href="{{ site.baseurl }}/css/pygments.css">
     </head>
     <body>
-      <div id="environment">{{ site.environment }}</div>
+        <div id="cnpaas" data-env="{{ site._env.environment }}" class="hidden"></div>
+
         {% include header.html %}
         <div class="container">
 
@@ -58,6 +59,7 @@
         <script src="{{ site.baseurl }}/js/user-login.js"></script>
         <script src="{{ site.baseurl }}/js/data-method.js"></script>
         <script src="{{ site.baseurl }}/js/disqus.js"></script>
+        <script src="{{ site.baseurl }}/js/baidu_tongji.js"></script>
         <script src="{{ site.baseurl }}/js/app.js"></script>
     </body>
 </html>
