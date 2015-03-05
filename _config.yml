@@ -1,9 +1,9 @@
 # Environment (to be overridden by _config.development.yml in development env)
-environment: production
 _env:
   www_url: http://www.cnpaas.io
   dashboard_url: http://dashboard.cnpaas.io
   blog_url: http://blog.cnpaas.io
+  environment: production
 
 # Site title and subtitle. This is used in _includes/header.html
 title: "CNPaaS"
