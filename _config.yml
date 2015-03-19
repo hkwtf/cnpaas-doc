@@ -16,7 +16,7 @@ subtitle: ""
 navigation: 2
 
 # URL to source code, used in _includes/footer.html
-codeurl: 'https://github.com/WTF-Limited/cnpaasdoc'
+codeurl: 'https://github.com/hkwtf/cnpaas-doc'
 
 # Default categories (in order) to appear in the navigation
 sections: [
