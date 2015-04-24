@@ -70,6 +70,20 @@ $ git push -f cnpaas master
 
 详情可参看 [这里]({{site.url}}/usage/php.html)。
 
+### 4. 导出导入数据库
 
+如果是将已有的 WordPress 网站迁移到 CNPaaS ，或者想自行备份网站数据，可能需要涉及到数据库的操作。这个时候你可以用应用后台 **外挂服务** 里的 **新增数据库界面** 功能，点击 “**+ phpMyAdmin 4**”按钮，一键生成 PHPMyAdmin 服务，点击下拉展开服务详情，点击里面的链接按钮，即打开 PHPMyAdmin 登陆界面，此时你可以用数据库信息里 **OPENSHIFT_MYSQL_DB_USERNAME** 的值作为用户名，**OPENSHIFT_MYSQL_DB_PASSWORD** 的值作为密码，进行登录。
+
+登录后使用 PHPMyAdmin 进行对应数据库的管理工作，包括SQL的导出和导入。
+
+### 5. 使用第三方CDN进行图片和静态文件备份及加速
+
+- 如果你是 [又拍云] 的用户，建议使用这个 WordPress 插件：[Upyun For WordPress](https://wordpress.org/plugins/upyun/)
+- 如果你是 [七牛] 的用户，你可以尝试以下插件：
+	- [Qiniu Cloud For WordPress](https://wordpress.org/plugins/qiniu-cloud/)
+	- [QiniuSpeed for WordPress](https://wordpress.org/plugins/qiniu-speed/)
+	- [七牛镜像存储 WordPress 插件](https://wordpress.org/plugins/wpjam-qiniu/)
 
 [创建]:http://dashboard.cnpaas.io/a
+[又拍云]:https://www.upyun.com
+[七牛]:http://www.qiniu.com
