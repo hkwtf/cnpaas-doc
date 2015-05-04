@@ -1,20 +1,22 @@
-require "yaml"
-require "tempfile"
+namespace :cnpaas do
+  ALL_ENVS    = %w(development production)
+  DEFAULT_ENV = "development"
 
-namespace :server do
-
-  # Create subtasks so we can run e.g. rake server:development
-  %w(development production).each do |env|
-    desc "Start server for #{env} environment"
-    task env.to_sym do
-      server env
+  # Create subtasks so we can run e.g. rake cnpaas:development:start
+  ALL_ENVS.each do |env|
+    desc "Start CNPaaS Doc server for '#{env}' environment"
+    task "#{env}:start" do
+      start_server env
     end
   end
 
-  def server(env)
-    puts "Starting server for '#{env}' environment..."
-    config_files = (env == "production") ? "" : "--config _config.yml,_config.#{env}.yml"
-    system "jekyll serve #{config_files}"
-  end
+  # Shorthand
+  desc "Start CNPaaS Doc server for '#{DEFAULT_ENV}' environment (shorthand)"
+  task "start" => "#{DEFAULT_ENV}:start"
 
+  def start_server(env)
+    puts "Starting CNPaaS Doc server for '#{env}' environment..."
+    config_files = "--config _config.yml,_config.#{env}.yml" if env != "production"
+    exec "jekyll serve #{config_files}"
+  end
 end
