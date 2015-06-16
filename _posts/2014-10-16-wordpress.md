@@ -12,6 +12,12 @@ published: true
 
 ---
 
+### 视频教程
+
+<iframe height=498 width=510 src="http://player.youku.com/embed/XMTI2MzUxOTQ2OA==" frameborder=0 allowfullscreen></iframe>
+
+如果你能访问 YouTube ，推荐在YouTube打开 [如何在 CNPaaS 上部署 WordPress](https://youtu.be/YUgibegzvpI) 的视频。
+
 ### 1. 下载 WordPress
 
 下载 [WordPress 4.0](https://wordpress.org/download/)。因为WordPress默认使用了 Google 字体，在内地载入可能会有点慢，可按照 [这里的方法](http://www.iztwp.com/googleapis2useso.html) 移除载入 Google Font。
