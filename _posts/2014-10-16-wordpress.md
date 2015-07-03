@@ -14,7 +14,9 @@ published: true
 
 ### 视频教程
 
-<iframe height=498 width=510 src="http://player.youku.com/embed/XMTI2MzUxOTQ2OA==" frameborder=0 allowfullscreen></iframe>
+<div class="center">
+  <iframe class="movie" src="http://player.youku.com/embed/XMTI2MzUxOTQ2OA==" frameborder=0 allowfullscreen></iframe>
+</div>
 
 如果你能访问 YouTube ，推荐在YouTube打开 [如何在 CNPaaS 上部署 WordPress](https://youtu.be/YUgibegzvpI) 的视频。
 
