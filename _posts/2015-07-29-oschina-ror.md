@@ -8,9 +8,12 @@ order: 2
 published: true
 ---
 
-<span>
-  现在只支持 ROR 3。不久也将会支持 ROR 4。
-</span>
+<div class="bg-info">
+  <ul>
+    <li>现在只支持 RoR 3，不久将会支持 RoR 4。</li>
+    <li>现在容器默认只有 256 MB 内存，而 ROR 应用很耗内存。如该 ROR 项目要载入很多插件，在部署代码后台运行 `bundle install` 时有可能超过内存上限而容器遭关闭。如使用默认容器，请注意应用状态。</li>
+  </ul>
+</div>
 
 1. 首先在 [Git@OSC] 创建一个 `Ruby` 类的代码库。因为里面有些档案设置要置定，想放便一点，不彷从这个 <a href="https://git.oschina.net/jimmychu_hkwtf/ror3-template" target="_blank">ROR 3 模版</a> fork/clone 一个项目出来。那可直接跳到 [第 5 步].
 
