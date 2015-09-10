@@ -19,8 +19,18 @@
           <li><a href="{{ site._env.www_url }}/#features">重点功能</a></li>
           <li><a href="{{ site._env.www_url }}/pricing">价格</a></li>
           <li class="active"><a href="{{ site.baseurl }}">文档</a></li>
-          <li><a href="{{ site._env.blog_url }}">博客</a></li>
-          <li><a href="{{ site._env.www_url }}/contact-us">联系我们</a></li>
+          <li class="dropdown">
+            <a href="#" data-toggle="dropdown">
+              <span>关于我们</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right" data-role="menu" aria-labelledBy="dLabel">
+              <li><a href="{{ site._env.www_url }}/vision">公司愿景</a></li>
+              <li><a href="{{ site._env.www_url }}/team">团队介绍</a></li>
+              <li><a href="/">团队博客</a></li>
+              <li><a href="{{ site._env.www_url }}/contact-us">联系我們</a></li>
+            </ul>
+          </li>
 
           <li class="user-login-false-controls"><a href="{{ site._env.dashboard_url }}/accounts/sign_in">登入</a></li>
           <li class="user-login-false-controls">
