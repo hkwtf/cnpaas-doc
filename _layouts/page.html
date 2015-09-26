@@ -2,16 +2,14 @@
 layout: default
 ---
 
-<div class=page-header>
-    <h2>
-      {% if page.top_title %}
-        {{ page.top_title }}
-      {% else %}
-        {{ page.title}}
-      {% endif %}
+<h2>
+  {% if page.top_title %}
+    {{ page.top_title }}
+  {% else %}
+    {{ page.title}}
+  {% endif %}
 
-      {% if page.subtitle %}<small>{{ page.subtitle }}</small>{% endif %}
-    </h2>
-</div>
+  {% if page.subtitle %}<small>{{ page.subtitle }}</small>{% endif %}
+</h2>
 
 {{ content }}

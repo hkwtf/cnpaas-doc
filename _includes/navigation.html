@@ -1,14 +1,14 @@
 <ul class="nav nav-list">
-    <li><a href="{{ site.baseurl }}/">文档首页</a></li>
+    <li class="nav-header"><a href="{{ site._env.doc_url }}/">文档首页</a></li>
     {% for section in site.sections %}
         {% assign attr = section[0] %}
         {% assign label = section[1] %}
 
         {% for page in site.categories[attr] %}
             {% if forloop.first %}
-                <li class=nav-header>{{ label }}</li>
+                <li class="nav-header">{{ label }}</li>
             {% endif %}
-            <li data-order="{{ page.order }}"><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></li>
+            <li data-order="{{ page.order }}"><a href="{{ site._env.doc_url }}{{ page.url }}">{{ page.title }}</a></li>
         {% endfor %}
     {% endfor %}
 <!-- List additional links. It is recommended to add a divider

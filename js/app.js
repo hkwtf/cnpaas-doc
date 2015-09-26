@@ -31,6 +31,7 @@ function orderNav() {
 
   for (var i = 0; i < sections.length; i++) {
       section = sections[i];
+      if (!lists[section]) { continue; }
       list = lists[section].sort(function(a, b) {
           return a[0] - b[0];
       });

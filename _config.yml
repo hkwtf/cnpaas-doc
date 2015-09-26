@@ -2,6 +2,7 @@
 _env:
   www_url: http://www.cnpaas.io
   dashboard_url: http://dashboard.cnpaas.io
+  doc_url: http://doc.cnpaas.io
   blog_url: http://blog.cnpaas.io
   environment: production
 

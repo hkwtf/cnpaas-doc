@@ -2,23 +2,66 @@
 ---
 
 body
-  font-size: 100%
-  font-family: Microsoft Yahei,Hiragino Sans GB,WenQuanYi Micro Hei,sans-serif
-  padding-top: 70px // navbar
+  padding-top: 70px         // navbar
+  color: #5a5a5a            // lighter body text
+  background-color: #f8f8fa // slight blue tint of white
 
-p
+h2
+  font-weight: 200
+  letter-spacing: 1px
+  line-height: 1
+  margin-top: 10px
+  margin-bottom: 20px
+  @media (min-width: 768px)
+    margin-bottom: 30px
+    font-size: 40px
+
+h3
+  margin-top: 40px
+  margin-bottom: 20px
+  font-weight: bold
+  @media (min-width: 768px)
+    margin-bottom: 20px
+
+h4
+  margin-top: 30px
+  margin-bottom: 20px
+  font-weight: bold
+  @media (min-width: 768px)
+    margin-bottom: 20px
+
+pre, code
+  border: none
+  border-radius: 0
+  background-color: rgba(128, 128, 128, 0.1)
+  font-size: 0.85em
+
+#content p
   line-height: 2em
   letter-spacing: .03em
 
 #navigation .nav-list
+  li a
+    padding: 3px 10px
   .nav-header
-    font-size: 1em
-  a
-    font-size: 0.9em
+    font-weight: bold
+    line-height: 20px
+    color: #999999
+    &, & a
+      padding: 3px 0
+  li+.nav-header
+    margin-top: 9px
+
+#content
+  font-size: 115%
+
+#footer
+  margin: 20px 0
 
 img
   &.embeddable
     display: block
+    max-width: 100%
     margin: 1em auto
     border: 1px solid #ccc
     border-radius: 4px
@@ -51,24 +94,15 @@ iframe
   text-align: center
 
 .navbar-cnpaas
-  .navbar-inner
-    background-color: #232d30
-    background-image: none
-    border-color: #4e656c
-    border-width: 0 0 5px
-    min-height: 50px
+  background-color: desaturate(darken(#31b0d5, 35%), 50%)
+  border-color: desaturate(darken(#31b0d5, 15%), 50%)
+  border-width: 0 0 5px
 
-  ul.nav.pull-right
-    @media (min-width: 768px)
-      // to prevent navbar wrapping to 2nd line
-      width: 500px
-
-  .brand
+  .navbar-brand
     color: #f8f8fa
     font-size: 28px
     font-weight: 100
     letter-spacing: 2px
-    padding: 0px 20px
 
     // Replace text by background image
     text-indent: -5000px
@@ -79,18 +113,8 @@ iframe
     background-position: 50% 50%
     background-size: 109px 24px
 
-  .nav
-    > li > a
-      padding: 15px 15px 15px
-      font-size: 14px
-
-    > .active > a
-      &, &:hover, &:focus
-        background-color: #090909
-        color: #fff
-
-    .btn
-      margin-top: 10px
+.page-header
+  margin-top: 0
 
 .user-login-true-controls
   &, .user-login &
@@ -99,6 +123,8 @@ iframe
     display: none
   .user-login-true &
     display: initial
+  .user-login-loading &
+    display: none
 
 .user-login-false-controls
   &, .user-login &
@@ -107,6 +133,45 @@ iframe
     display: initial
   .user-login-true &
     display: none
+  .user-login-loading &
+    display: none
+
+.user-login-loading-controls
+  &, .user-login &
+    display: none
+  .user-login-false &
+    display: none
+  .user-login-true &
+    display: none
+  .user-login-loading &
+    display: initial
+
+.glyphicon-spin
+  -webkit-animation: spin 1500ms infinite linear
+  animation: spin 1500ms infinite linear
+@-webkit-keyframes spin
+  0%
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+  100%
+    -webkit-transform: rotate(359deg)
+    transform: rotate(359deg)
+@keyframes spin
+  0%
+    -webkit-transform: rotate(0deg)
+    transform: rotate(0deg)
+  100%
+    -webkit-transform: rotabte(359deg)
+    transform: rotate(359deg)
+
+.margin-left
+  margin-left: 10px
+.margin-right
+  margin-right: 10px
+.margin-top
+  margin-top: 10px
+.margin-bottom
+  margin-bottom: 10px
 
 .bg-info
   background-color: #fcf8e3
