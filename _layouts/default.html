@@ -11,9 +11,8 @@
 
         <title>{{ site.title }}{% if page.title %} : {{ page.title }}{% endif %}</title>
 
-        <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
         <link rel="stylesheet" href="{{ site.baseurl }}/css/syntax.css">
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/css/cnpaas.css">
         <link rel="stylesheet" href="{{ site.baseurl }}/css/pygments.css">
     </head>
@@ -23,43 +22,47 @@
         {% include header.html %}
         <div class="container">
 
-            <div class="row-fluid extra-bottom-margin">
+            <div class="row extra-bottom-margin">
                 {% assign post_count = site.posts|size %}
                 {% if site.navigation != 0 and site.navigation == 1 or post_count > 0 %}
-                    <div id=navigation class=span2>
+                    <div id="navigation" class="col-md-2 col-sm-3">
                         {% include navigation.html %}
+                        <hr class="visible-xs-block"/>
                     </div>
 
-                    <div id=content class=span10>
+                    <div id="content" class="col-md-10 col-sm-9">
                         {{ content }}
                     </div>
                 {% else %}
-                    <div id=content class=span12>
+                    <div id="content" class="col-sm-12">
                         {{ content }}
                     </div>
                 {% endif %}
             </div>
 
         {% if page.comments %}
-          <div class=row-fluid>
-            <div id="disqus_thread" class="span12"></div>
+          <div class="row">
+            <div id="disqus_thread" class="col-sm-12"></div>
           </div>
           <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
         {% endif %}
 
-            <div class=row-fluid>
-                <div id=footer class=span12>
-                    {% include footer.html %}
+            <div class="row">
+                <div id="footer" class="col-sm-12">
+                    <div class="margin-top">
+                        {% include footer.html %}
+                    </div>
                 </div>
             </div>
         </div>
 
         <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-        <script src="//maxcdn.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <script src="{{ site.baseurl }}/js/user-login.js"></script>
         <script src="{{ site.baseurl }}/js/data-method.js"></script>
         <script src="{{ site.baseurl }}/js/disqus.js"></script>
         <script src="{{ site.baseurl }}/js/baidu_tongji.js"></script>
+        <script src="{{ site.baseurl }}/js/navbar-collapse-fix.js"></script>
         <script src="{{ site.baseurl }}/js/app.js"></script>
     </body>
 </html>
