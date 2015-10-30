@@ -1,3 +1,5 @@
+document.location.replace("http://blog.cnpaas.io");
+
 function orderNav() {
   var list,
       section,
